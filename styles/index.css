@@ -1,32 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-weight: lighter;
+/* ======== IMPORT FONTS ======== */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,700');
+
+span {
+    display: block;
 }
 
-/* ======== KHAI BÁO FONT ======== */
-@font-face {
-    font-family: SSP-light;
-    src: url(../fonts/SourceSansPro-Light.otf);
-}
-
-@font-face {
-    font-family: SSP-regular;
-    src: url(../fonts/SourceSansPro-Regular.otf);
-}
-
-@font-face {
-    font-family: M-ultralight;
-    src: url(../fonts/Montserrat-UltraLight.otf);
-}
-
-@font-face {
-    font-family: M-bold;
-    src: url(../fonts/Montserrat-Bold.otf);
-}
-
-
-/* ======== FLEXBOX ======== */
+/* ======== CONTAINER AND PRICING TABLES ======== */
 .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -40,178 +21,203 @@
         -ms-flex-align: center;
             align-items: center;
     background-color: #cad3d3;
+    text-align: center;
+    max-width: 100%;
 }
 
-.item {
-    width: 362px;
-    height: 768px;  /* nên dùng height: auto */
+.pricing-table, .pricing-table--featured {
     background-color: #ffffff;
     margin: 100px 23px;
     position: relative;
+    width: auto;
+    height: auto;
 }
 
 
 /* ======== IMAGES ======== */
-.image {
+.pricing-table__bgimage {
     position: relative;
 } /* Lớp ảnh thứ 1 */
 
-.glass {
+.pricing-table__bgimage--blur {
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     opacity: 0.6;
 } /* Lớp ảnh thứ 2 */
 
-.bigtext {
+.pricing-table__title {
     position: absolute;
-    bottom: 115.5px;
-    width: 100%;
-    font-family: M-ultralight;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     font-size: 36px;
-    text-align: center;
     color: #ffffff;
 } /* Lớp chữ thứ 3 */
 
-.bigtext p {
-    font-family: SSP-regular;
+.pricing-table__title-sub {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
     font-size: 13px;
     color: #b6c6c9;
-    padding-top: 10px;
+    line-height: 2;
 }
 
-.new {
+.pricing-table__sticker {
     position: absolute;
-    top: -15px;
-    left: -15px;
+    top: -5%;
+    left: -5%;
 } /* Nhãn NEW của Block 2 */
 
-.new p {
+@media (max-width: 400px) {
+    .pricing-table__sticker {
     position: absolute;
-    font-family: M-bold;
+    top: -5%;
+    left: -1%;
+} /* Nhãn NEW của Block 2 */
+}
+
+.pricing-table__sticker-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     font-size: 12px;
     color: #ffffff;
-    text-align: center;
-    width: 100%;
-    bottom: 30px;
 }
 
 
 /* ======== PRICE TAGS ======== */
-.circle {
+.pricing-table__priceTag {
     position: absolute;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    top: -60px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 32px;
-    font-family: SSP-light;
-    line-height: 1.5;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
 }
 
-.circle.one {
-    background-color: #ffffff;
+.pricing-table:nth-child(1) .pricing-table__priceTag {
     color: #2196f7;
 }
 
-.circle.two {
+.pricing-table--featured .pricing-table__priceTag {
     background-color: #2c2e3d;
     color: #d74498;
 }
 
-.circle.three {
-    background-color: #ffffff;
+.pricing-table:nth-child(3) .pricing-table__priceTag {
     color: #32ad1e;
 }
 
-.circle p:nth-child(1) {
-    padding-top: 20px;
+.pricing-table__price{
+    margin: 30px 0 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
 } /* giá $$ */
 
 
-.circle p:nth-child(2) {
+.pricing-table__price-sub {
     font-size: 16px;
-    font-family: SSP-regular;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
     color: #99a9b5;
 } /* chữ Per tour*/
 
 
-/* ======== MAIN CONTENT ======== */
-.text {
-    text-align: center;
-    font-family: SSP-regular;
+/* ======== PRICING PLANS ======== */
+.pricing-table__plans {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
     color: #5f727f;
 }
 
-.text ul li {
+.pricing-table__plans ul {
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-table__plans ul li {
     font-size: 0.95em;
     list-style-type: none;
     padding: 20px 0;
 }
 
-.text ul li:nth-child(odd) {
+.pricing-table__plans ul li:nth-child(odd) {
     background-color: #f4f6f7;
 } /* màu nền so le giữa các mục */
 
-h1 {
-    font-family: SSP-light;
-    font-size: 24px;
-    margin-bottom: 10px;
+.pricing-table__plans-sub {
+    margin: 25px 0;
+}
+
+h2, h3 {
+    margin: 0;
+    line-height: 1.5;
 }
 
 h2 {
-    font-family: SSP-regular;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
     font-size: 14px;
     color: #99a9b5;
-    padding-bottom: 20px;
 }
 
 /* === BUTTONS ==== */
-.button {
-    font-size: 19px;
-    font-family: M-ultralight;
-    cursor: pointer;
-    text-align: center;
-    padding: 14px 35.5px;
-    margin-top: 8px;
-    /*margin-top:20px;
-    margin-bottom: 20px;*/
+.pricing-table__buttons {
+    margin: 60px 0px;
 }
 
-.button.one {
-    border: 1px solid #2196f7;
+.btn {
+    text-decoration: none;
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    cursor: pointer;
     background-color: #ffffff;
+    padding: 14px 35.5px;
+}
+
+.btn--blue {
+    border: 1px solid #2196f7;
     color: #2196f7;
 }
 
-.button.one:hover {
+.btn--blue:hover {
     background-color: #2196f7;
     color: #ffffff;
 }
 
-.button.two {
+.btn--purple {
     border: 1px solid #6c136f;
-    background-color: #ffffff;
     color: #6c136f;
 }
 
-.button.two:hover {
+.btn--purple:hover {
     background-color: #6c136f;
     color: #ffffff;
 }
 
-.button.three {
+.btn--green {
     border: 1px solid #32ad1e;
-    background-color: #ffffff;
     color: #32ad1e;
 }
 
-.button.three:hover {
+.btn--green:hover {
     background-color: #32ad1e;
     color: #ffffff;
 }

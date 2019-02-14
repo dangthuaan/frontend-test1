@@ -5,27 +5,27 @@
 	<title>Price Tables</title>
 	<meta name="description" content="PSD to HTML testing - An Dang Thua">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
 	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
 </head>
 <body>
 	<div class="container">
 
-		<div class="item"> <!-- ***Block 1 begins*** -->
-			<div class="image"> <!-- Image -->
+		<div class="pricing-table"> <!-- ***Pricing table 1 begins*** -->
+			<div class="pricing-table__bgimage"> <!-- Image -->
 				<img src="images/img1.jpg" alt="Ocean image">
-				<img src="images/glass.jpg" alt="Glass layer" class="glass">
-				<div class="bigtext">OCEAN</div>
+				<img src="images/glass.jpg" alt="Glass layer" class="pricing-table__bgimage pricing-table__bgimage--blur">
+				<span class="pricing-table__title">OCEAN</span>
 			</div>
-
-			<div class="circle one"> <!-- Circle price tag -->
-				<p>$399</p>
-				<p>Per tour</p>
+			<div class="pricing-table__priceTag"> <!-- Circle price tag -->
+				<span class="pricing-table__price">$399</span>
+				<span class="pricing-table__price-sub">Per tour</span>
 			</div>
-
-			<div class="text"> <!-- Text Content -->
-				<h1>Subtitle goes here</h1>
-				<h2>Subtitle second line goes here lorem ipsum *</h2>
+			<div class="pricing-table__plans"> <!-- Plans content -->
+				<div class="pricing-table__plans-sub">
+					<h2>Subtitle goes here</h2>
+					<h3>Subtitle second line goes here lorem ipsum *</h3>
+				</div>
 				<ul>
 					<li>Drop out ramen hustle</li>
 					<li>Coworking viral landing</li>
@@ -33,68 +33,66 @@
 					<li>User base minimum viable</li>
 					<li>Lorem ipsum dolor</li>
 				</ul>
+				<div class="pricing-table__buttons">
+					<a class="btn btn--blue" href="#">BUY TOUR</a>
+				</div>
 			</div>
+		</div> <!-- ***End of Pricing table 1*** -->
 
-			<div class="button"> <!-- Buy button -->
-				<form action="#">
-					<input class="button one" type="submit" name="btn_submit" value="BUY TOUR">
-				</form>
-			</div>
-		</div> <!-- ***End of Block 1*** -->
-
-		<div class="item"> <!-- ***Block 2 begins*** -->
-			<div class="image"> <!-- Image -->
+		<div class="pricing-table pricing-table--featured"> <!-- ***Pricing table 2 begins*** -->
+			<div class="pricing-table__bgimage"> <!-- Image -->
 				<img src="images/img2.jpg" alt="Mountains image">
-				<img src="images/glass.jpg" alt="Glass layer" class="glass">
-				<div class="new">
+				<img src="images/glass.jpg" alt="Glass layer" class="pricing-table__bgimage pricing-table__bgimage--blur">
+				<div class="pricing-table__sticker">
 					<img src="images/new.svg" alt="NEW">
-					<p>NEW</p>
+					<span class="pricing-table__sticker-text">NEW</span>
 				</div>
-				<div class="bigtext">
+				<span class="pricing-table__title">
 					MOUNTAINS
-					<p>The best price/quantity plan *</p>
+					<span class="pricing-table__title-sub">The best price/quantity plan *</span>
+				</span>
+			</div>
+
+			<div class="pricing-table__priceTag"> <!-- Circle price tag -->
+				<span class="pricing-table__price">$499</span>
+				<span class="pricing-table__price-sub">Per tour</span>
+			</div>
+
+			<div class="pricing-table__plans"> <!-- Plans content -->
+				<div class="pricing-table__plans-sub">
+					<h2>Subtitle goes here</h2>
+					<h3>Subtitle second line goes here lorem ipsum *</h3>
+				</div>
+				<ul>
+					<li>Drop out ramen hustle</li>
+					<li>Coworking viral landing</li>
+					<li>Crush revenue traction</li>
+					<li>User base minimum viable</li>
+					<li>Lorem ipsum dolor</li>
+				</ul>
+				<div class="pricing-table__buttons">
+					<a class="btn btn--purple" href="#">BUY TOUR</a>
 				</div>
 			</div>
+		</div> <!-- ***End of Pricing table 2*** -->
 
-			<div class="circle two"> <!-- Circle price tag -->
-				<p>$499</p>
-				<p>Per tour</p>
-			</div>
-
-			<div class="text"> <!-- Text Content -->
-				<h1>Subtitle goes here</h1>
-				<h2>Subtitle second line goes here lorem ipsum *</h2>
-				<ul>
-					<li>Drop out ramen hustle</li>
-					<li>Coworking viral landing</li>
-					<li>Crush revenue traction</li>
-					<li>User base minimum viable</li>
-					<li>Lorem ipsum dolor</li>
-				</ul>
-
-			</div>
-			<div class="button"> <!-- Buy button -->
-				<form action="#">
-					<input class="button two" type="submit" name="btn_submit" value="BUY TOUR">
-				</form>
-			</div>
-		</div> <!-- ***End of Block 2*** -->
-
-		<div class="item"> <!-- ***Block 3 begins*** -->
-			<div class="image"> <!-- Image -->
+		<div class="pricing-table"> <!-- ***Pricing table 3 begins*** -->
+			<div class="pricing-table__bgimage"> <!-- Image -->
 				<img src="images/img3.jpg" alt="Forest image">
-				<img src="images/glass.jpg" alt="Glass layer" class="glass">
-				<div class="bigtext">FOREST</div>
+				<img src="images/glass.jpg" alt="Glass layer" class="pricing-table__bgimage pricing-table__bgimage--blur">
+				<span class="pricing-table__title">FOREST</span>
 			</div>
 
-			<div class="circle three"> <!-- Circle price tag -->
-				<p>$599</p>
-				<p>Per tour</p>
+			<div class="pricing-table__priceTag"> <!-- Circle price tag -->
+				<span class="pricing-table__price">$599</span>
+				<span class="pricing-table__price-sub">Per tour</span>
 			</div>
 
-			<div class="text"> <!-- Text Content -->
-				<h1>Subtitle goes here</h1>
-				<h2>Subtitle second line goes here lorem ipsum *</h2>
+			<div class="pricing-table__plans"> <!-- Plans content -->
+				<div class="pricing-table__plans-sub">
+					<h2>Subtitle goes here</h2>
+					<h3>Subtitle second line goes here lorem ipsum *</h3>
+				</div>
 				<ul>
 					<li>Drop out ramen hustle</li>
 					<li>Coworking viral landing</li>
@@ -102,14 +100,11 @@
 					<li>User base minimum viable</li>
 					<li>Lorem ipsum dolor</li>
 				</ul>
+				<div class="pricing-table__buttons">
+					<a class="btn btn--green" href="#">BUY TOUR</a>
+				</div>
 			</div>
-
-			<div class="button"> <!-- Buy button -->
-				<form action="#">
-					<input class="button three" type="submit" name="btn_submit" value="BUY TOUR">
-				</form>
-			</div>
-		</div> <!-- ***End of Block 3*** -->
+		</div> <!-- ***End of Pricing table 3*** -->
 
 	</div>
 </body>

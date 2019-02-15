@@ -1,11 +1,7 @@
 /* ======== IMPORT FONTS ======== */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,700');
-
-span {
-    display: block;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
 
 /* ======== CONTAINER AND PRICING TABLES ======== */
 .container {
@@ -23,63 +19,62 @@ span {
     background-color: #cad3d3;
     text-align: center;
     max-width: 100%;
+    padding: 80px 0;
 }
 
-.pricing-table, .pricing-table--featured {
+.pricing-table, .pricing-table.pricing-table--basic, .pricing-table.pricing-table--featured {
     background-color: #ffffff;
-    margin: 100px 23px;
     position: relative;
-    width: auto;
-    height: auto;
+    margin: 40px auto;
 }
 
 
 /* ======== IMAGES ======== */
 .pricing-table__bgimage {
     position: relative;
-} /* Lớp ảnh thứ 1 */
+} /* Image layer 1 */
 
 .pricing-table__bgimage--blur {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0.6;
-} /* Lớp ảnh thứ 2 */
+} /* Image layer 2 (Blur glass) */
 
-.pricing-table__title {
+.pricing-table__title-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.pricing-table__title, .pricing-table__title-sub {
+	margin: 0;
+	line-height: 1.5;
+}
+
+.pricing-table__title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 36px;
     color: #ffffff;
-} /* Lớp chữ thứ 3 */
+}
 
 .pricing-table__title-sub {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 13px;
     color: #b6c6c9;
-    line-height: 2;
 }
 
-.pricing-table__sticker {
+
+.pricing-table--featured .pricing-table__new-sticker {
     position: absolute;
     top: -5%;
     left: -5%;
-} /* Nhãn NEW của Block 2 */
+} /* NEW Sticker */
 
-@media (max-width: 400px) {
-    .pricing-table__sticker {
-    position: absolute;
-    top: -5%;
-    left: -1%;
-} /* Nhãn NEW của Block 2 */
-}
-
-.pricing-table__sticker-text {
+.pricing-table--featured .pricing-table__new-sticker-title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -88,11 +83,11 @@ span {
     font-weight: 700;
     font-size: 12px;
     color: #ffffff;
-}
+} /* NEW Sticker text */
 
 
 /* ======== PRICE TAGS ======== */
-.pricing-table__priceTag {
+.pricing-table__price-tag {
     position: absolute;
     width: 120px;
     height: 120px;
@@ -103,34 +98,34 @@ span {
     background-color: #ffffff;
 }
 
-.pricing-table:nth-child(1) .pricing-table__priceTag {
+.pricing-table--basic.basic-one .pricing-table__price-tag {
     color: #2196f7;
 }
 
-.pricing-table--featured .pricing-table__priceTag {
+.pricing-table--featured .pricing-table__price-tag {
     background-color: #2c2e3d;
     color: #d74498;
 }
 
-.pricing-table:nth-child(3) .pricing-table__priceTag {
+.pricing-table--basic.basic-two .pricing-table__price-tag {
     color: #32ad1e;
 }
 
-.pricing-table__price{
+.pricing-table__price {
     margin: 30px 0 0;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-size: 32px;
-} /* giá $$ */
+} /* Price */
 
 
-.pricing-table__price-sub {
+.pricing-table__price-unit {
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     line-height: 1.5;
     color: #99a9b5;
-} /* chữ Per tour*/
+} /* Price unit */
 
 
 /* ======== PRICING PLANS ======== */
@@ -140,46 +135,45 @@ span {
     color: #5f727f;
 }
 
-.pricing-table__plans ul {
+.pricing-table__plans-list {
     padding: 0;
     margin: 0;
 }
 
-.pricing-table__plans ul li {
+.pricing-table__plans-list li {
     font-size: 0.95em;
     list-style-type: none;
     padding: 20px 0;
 }
 
-.pricing-table__plans ul li:nth-child(odd) {
+.pricing-table__plans-list li:nth-child(odd) {
     background-color: #f4f6f7;
-} /* màu nền so le giữa các mục */
+} /* alternate color */
 
-.pricing-table__plans-sub {
+.pricing-table__plans-sub-wrapper {
     margin: 25px 0;
 }
 
-h2, h3 {
+.pricing-table__plans-sub, .pricing-table__plans-sub-second {
     margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.5;
 }
 
-h2 {
-    font-family: 'Source Sans Pro', sans-serif;
+.pricing-table__plans-sub {
     font-weight: 300;
     font-size: 24px;
 }
 
-h3 {
-    font-family: 'Source Sans Pro', sans-serif;
+.pricing-table__plans-sub-second {
     font-weight: 400;
     font-size: 14px;
     color: #99a9b5;
 }
 
 /* === BUTTONS ==== */
-.pricing-table__buttons {
-    margin: 60px 0px;
+.pricing-table__button-wrapper {
+    padding: 60px 0px;
 }
 
 .btn {
@@ -192,32 +186,32 @@ h3 {
     padding: 14px 35.5px;
 }
 
-.btn--blue {
+.pricing-table--basic.basic-one .btn {
     border: 1px solid #2196f7;
     color: #2196f7;
 }
 
-.btn--blue:hover {
+.pricing-table--basic.basic-one .btn:hover {
     background-color: #2196f7;
     color: #ffffff;
 }
 
-.btn--purple {
+.pricing-table--featured .btn {
     border: 1px solid #6c136f;
     color: #6c136f;
 }
 
-.btn--purple:hover {
+.pricing-table--featured .btn:hover {
     background-color: #6c136f;
     color: #ffffff;
 }
 
-.btn--green {
+.pricing-table--basic.basic-two .btn {
     border: 1px solid #32ad1e;
     color: #32ad1e;
 }
 
-.btn--green:hover {
+.pricing-table--basic.basic-two .btn:hover {
     background-color: #32ad1e;
     color: #ffffff;
 }
